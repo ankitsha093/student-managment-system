@@ -1,8 +1,11 @@
-import React from 'react'
+import Auth from "./auth"
+
 
 const SignIn = () => {
   return (
-    <div>SignIn</div>
+    <Auth>
+        <h1>sign in</h1>
+    </Auth>
   )
 }
 
