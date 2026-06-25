@@ -98,7 +98,7 @@ const SignUp = () => {
       <div className="flex justify-center gap-1.5 mt-6 mb-3 items-center before:content-[''] before:h-[0.063rem] before:flex-1 before:bg-[#E9EDF4] after:content-[''] after:h-[0.063rem] after:flex-1 after:bg-[#E9EDF4]">
         OR
       </div>
-      <FieldGroup>
+      <FieldGroup className="gap-3.5">
         <Field>
           <FieldLabel htmlFor="fieldgroup-name">Name</FieldLabel>
           <Input id="fieldgroup-name" placeholder="Jordan Lee" />
