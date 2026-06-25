@@ -23,9 +23,7 @@ const SignUp = () => {
     <Auth>
       <h2 className="text-2xl font-bold">Register</h2>
       <p>Please enter your details to sign up</p>
-      <div className="flex justify-center gap-1.5 mt-6 items-center before:content-[''] before:h-[0.063rem] before:flex-1 before:bg-[#E9EDF4] after:content-[''] after:h-[0.063rem] after:flex-1 after:bg-[#E9EDF4]">
-        OR
-      </div>
+
       <div className=" flex justify-between my-6 gap-2.5">
         <Button className="bg-[#288EC7] hover:bg-[#288EC7]/80 py-0 h-14 flex-1">
           <svg
@@ -94,6 +92,9 @@ const SignUp = () => {
             />
           </svg>
         </Button>
+      </div>
+      <div className="flex justify-center gap-1.5 mt-6 mb-3 items-center before:content-[''] before:h-[0.063rem] before:flex-1 before:bg-[#E9EDF4] after:content-[''] after:h-[0.063rem] after:flex-1 after:bg-[#E9EDF4]">
+        OR
       </div>
       <FieldGroup>
         <Field>
