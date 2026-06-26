@@ -58,7 +58,7 @@ function Auth({ children }: { children: React.ReactNode }) {
         </div>
       </div>
       <div className="flex align-center justify-center flex-col w-1/2">
-        <div className="w-[60%] mx-auto flex flex-col gap-20 align-middle justify-center">
+        <div className="w-1/2 min-w-96 mx-auto flex flex-col gap-20 align-middle justify-center">
           <Link to="/" className="flex justify-center">
             <img src={logo} alt="Preskool Logo" className="h-12 w-auto" />
           </Link>
