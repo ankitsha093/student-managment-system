@@ -24,7 +24,6 @@ const SignIn = () => {
       <p className="text-sm mb-4 text-[#515B73]">
         Please enter your details to sign in
       </p>
-
       <div className=" flex justify-between my-6 gap-2.5">
         <Button className="bg-[#288EC7] hover:bg-[#288EC7]/80 py-0 h-14 flex-1">
           <svg
@@ -140,7 +139,7 @@ const SignIn = () => {
       </Button>
       <div className="text-center mt-4">
         Don’t have an account?{" "}
-        <Link to="/signup" className="text-[#0F65CD] hover:underline">
+        <Link to="/sign-up" className="text-[#0F65CD] hover:underline">
           Create Account
         </Link>
       </div>
