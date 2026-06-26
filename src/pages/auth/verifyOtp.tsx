@@ -25,20 +25,20 @@ const VerifyOtp = () => {
         </p>
      
      
- <Field className="w-fit mt-4 mb-4">
+ <Field className="w-full mt-4 mb-4">
    
-      <InputOTP id="digits-only" maxLength={4} >
-        <InputOTPGroup>
-          <InputOTPSlot index={0} className="w-[90px] h-[60px] border-color:[#E6E8EB]"/>
-          <InputOTPSlot index={1} className="w-[90px] h-[60px] border-color:[#E6E8EB]"/>
-          <InputOTPSlot index={2} className="w-[90px] h-[60px] border-color:[#E6E8EB]"/>
-          <InputOTPSlot index={3} className="w-[90px] h-[60px] border-color:[#E6E8EB]"/>
+      <InputOTP id="digits-only" maxLength={4} className="w-full">
+        <InputOTPGroup className="flex gap-4 w-full">
+          <InputOTPSlot index={0} className="w-13 h-13 rounded-sm flex-1 border-color:[#E6E8EB]"/>
+          <InputOTPSlot index={1} className="w-13 h-13 rounded-sm flex-1 border-color:[#E6E8EB]"/>
+          <InputOTPSlot index={2} className="w-13 h-13 rounded-sm flex-1 border-color:[#E6E8EB]"/>
+          <InputOTPSlot index={3} className="w-13 h-13 rounded-sm flex-1 border-color:[#E6E8EB]"/>
         </InputOTPGroup>
       </InputOTP>
     </Field>
-     <Alert variant="destructive" className="max-w-md mb-2">
+     <Alert variant="destructive" className="max-w-sm mb-2">
       <AlertCircleIcon />
-      <AlertTitle>Otp will expire in 09:59</AlertTitle>
+      <AlertTitle >Otp will expire in 09:59</AlertTitle>
 
     </Alert>
         <Button
