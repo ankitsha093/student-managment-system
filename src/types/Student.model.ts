@@ -1,4 +1,5 @@
-import type { Class, House, Section } from "./academics.modal";
+import type { Class, House, Section } from "./Academics.modal";
+
 // Student Modal -----------------------------------
 export type Student = {
   personalInfo: PersonalInfo;
