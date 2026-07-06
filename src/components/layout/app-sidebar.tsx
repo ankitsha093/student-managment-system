@@ -8,10 +8,15 @@ import {
   Command,
   Frame,
   GalleryVerticalEnd,
+  GraduationCap,
+  LayoutDashboard,
   Map,
   PieChart,
   Settings2,
+  ShieldUser,
   SquareTerminal,
+  UserCog,
+  UsersRound,
 } from "lucide-react";
 
 import {
@@ -55,7 +60,7 @@ const data = {
     {
       title: "Dashboard",
       url: "#",
-      icon: SquareTerminal,
+      icon: LayoutDashboard,
       isActive: false,
       items: [
         {
@@ -81,7 +86,7 @@ const data = {
     {
       title: "Students",
       url: "#",
-      icon: SquareTerminal,
+      icon: GraduationCap,
       isActive: false,
       items: [
         {
@@ -105,7 +110,7 @@ const data = {
     {
       title: "Parents",
       url: "#",
-      icon: SquareTerminal,
+      icon: UserCog,
       isActive: false,
       items: [
         {
@@ -121,7 +126,7 @@ const data = {
     {
       title: "Guardian",
       url: "#",
-      icon: SquareTerminal,
+      icon: ShieldUser,
       isActive: false,
       items: [
         {
@@ -137,7 +142,7 @@ const data = {
     {
       title: "Teachers",
       url: "#",
-      icon: SquareTerminal,
+      icon: UsersRound,
       isActive: false,
       items: [
         {
