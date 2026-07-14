@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VerifyOtpRouteImport } from './routes/verify-otp'
 import { Route as VerifyEmailRouteImport } from './routes/verify-email'
+import { Route as StudentsRouteImport } from './routes/students'
 import { Route as SignUpRouteImport } from './routes/sign-up'
 import { Route as SignInRouteImport } from './routes/sign-in'
 import { Route as ResetPasswordRouteImport } from './routes/reset-password'
@@ -26,6 +27,11 @@ const VerifyOtpRoute = VerifyOtpRouteImport.update({
 const VerifyEmailRoute = VerifyEmailRouteImport.update({
   id: '/verify-email',
   path: '/verify-email',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentsRoute = StudentsRouteImport.update({
+  id: '/students',
+  path: '/students',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SignUpRoute = SignUpRouteImport.update({
@@ -66,6 +72,7 @@ export interface FileRoutesByFullPath {
   '/reset-password': typeof ResetPasswordRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
+  '/students': typeof StudentsRoute
   '/verify-email': typeof VerifyEmailRoute
   '/verify-otp': typeof VerifyOtpRoute
 }
@@ -76,6 +83,7 @@ export interface FileRoutesByTo {
   '/reset-password': typeof ResetPasswordRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
+  '/students': typeof StudentsRoute
   '/verify-email': typeof VerifyEmailRoute
   '/verify-otp': typeof VerifyOtpRoute
 }
@@ -87,6 +95,7 @@ export interface FileRoutesById {
   '/reset-password': typeof ResetPasswordRoute
   '/sign-in': typeof SignInRoute
   '/sign-up': typeof SignUpRoute
+  '/students': typeof StudentsRoute
   '/verify-email': typeof VerifyEmailRoute
   '/verify-otp': typeof VerifyOtpRoute
 }
@@ -99,6 +108,7 @@ export interface FileRouteTypes {
     | '/reset-password'
     | '/sign-in'
     | '/sign-up'
+    | '/students'
     | '/verify-email'
     | '/verify-otp'
   fileRoutesByTo: FileRoutesByTo
@@ -109,6 +119,7 @@ export interface FileRouteTypes {
     | '/reset-password'
     | '/sign-in'
     | '/sign-up'
+    | '/students'
     | '/verify-email'
     | '/verify-otp'
   id:
@@ -119,6 +130,7 @@ export interface FileRouteTypes {
     | '/reset-password'
     | '/sign-in'
     | '/sign-up'
+    | '/students'
     | '/verify-email'
     | '/verify-otp'
   fileRoutesById: FileRoutesById
@@ -130,6 +142,7 @@ export interface RootRouteChildren {
   ResetPasswordRoute: typeof ResetPasswordRoute
   SignInRoute: typeof SignInRoute
   SignUpRoute: typeof SignUpRoute
+  StudentsRoute: typeof StudentsRoute
   VerifyEmailRoute: typeof VerifyEmailRoute
   VerifyOtpRoute: typeof VerifyOtpRoute
 }
@@ -148,6 +161,13 @@ declare module '@tanstack/react-router' {
       path: '/verify-email'
       fullPath: '/verify-email'
       preLoaderRoute: typeof VerifyEmailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/students': {
+      id: '/students'
+      path: '/students'
+      fullPath: '/students'
+      preLoaderRoute: typeof StudentsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sign-up': {
@@ -202,6 +222,7 @@ const rootRouteChildren: RootRouteChildren = {
   ResetPasswordRoute: ResetPasswordRoute,
   SignInRoute: SignInRoute,
   SignUpRoute: SignUpRoute,
+  StudentsRoute: StudentsRoute,
   VerifyEmailRoute: VerifyEmailRoute,
   VerifyOtpRoute: VerifyOtpRoute,
 }
