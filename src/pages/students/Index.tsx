@@ -7,6 +7,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import List from "./List";
 
 const StudentsPage = () => {
   return (
@@ -31,7 +32,7 @@ const StudentsPage = () => {
 
       <div className="flex flex-1 flex-col gap-4 p-4 pt-0 w-full">
         <div>
-          
+          <List />
         </div>
       </div>
     </Layout>
